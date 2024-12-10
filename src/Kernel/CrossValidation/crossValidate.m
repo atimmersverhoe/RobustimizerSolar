@@ -73,9 +73,9 @@ function [result] = crossValidate(DOE, outputVal, srgModel, opt)
                 opt.progress_dlg.Value = percentage;
             end
             DOEExcl = DOE([1:counter2-1, counter2+1:end], :);  % Copy all rows except the row counter2
-            outputCross = out([1:counter2-1, counter2+1:end], :);  % Copy all rows except the row counter2
+            outputCross = out([1:counter2-1, counter2+1:end], counter1);  % Copy all rows except the row counter2
             [surrogateModel] = dacefit(DOEExcl, outputCross, regr, corr, t0, lowerB, upperB);
-            [Ypredicted(counter2,counter1), ~, YpredMSE(counter2,counter1)] = predictor(DOE(counter2,:),surrogateModel);
+            [Ypredicted(counter2,counter1),~, YpredMSE(counter2,counter1)] = predictor(DOE(counter2,:),surrogateModel);
             res = out(counter2,counter1) - Ypredicted(counter2,counter1);
             [resid(counter2,1),SSEcv(counter2,1)]=deal(res,res.^2);
             sqYpred(counter2,1) = sqrt(YpredMSE(counter2,counter1));
