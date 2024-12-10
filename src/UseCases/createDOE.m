@@ -40,7 +40,7 @@ function [success, errorMessage] = createDOE(project, nDOEPoints, opts)
         return;
     end
 
-    normalizedDOE = makeDOE(vars.count, nDOEPoints, opts.inclFactorial, opts.inclMaxMin);
+    normalizedDOE = MakeDOE(vars.count, nDOEPoints, opts.inclFactorial, opts.inclMaxMin);
     DOENormalizedtemp = (normalizedDOE-0.5)*2;
     lowerBnd = vars.designRanges(:,1)';
     upperBnd = vars.designRanges(:,2)';
