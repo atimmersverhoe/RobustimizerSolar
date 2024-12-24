@@ -4,7 +4,7 @@ function performMCOnResponses(project, sampleSize, srgModelNum)
     arguments
         project Project
         sampleSize = 1000;
-        srgModelNum = 5;
+        srgModelNum = 1;
     end
 
     % Store the sample size in the project for future reference
@@ -29,7 +29,7 @@ function [DOEforMC, result] = calculateMC(sampleSize, globX, nResponses, noiseDi
     end
 
     %Settings for performing Monte Carlo on the optimum response value
-    FinalMCsize = sampleSize; %Size of MC sampling
+    FinalMCsize = 10*sampleSize; %Size of MC sampling
     nNoiseVars = height(noiseDistributions);
     noiseMean = noiseDistributions(:,1);
     noiseStdDev = noiseDistributions(:,2);
@@ -42,14 +42,14 @@ function [DOEforMC, result] = calculateMC(sampleSize, globX, nResponses, noiseDi
 
     result = [];
     for i = 1:nResponses
-        %DOE for Monte Carlo analysis
+        %DOE for Monte Carlo analysis on the optimum response
         DOEmc = [ones(FinalMCsize,1)*globX , DOEforMC ]; 
 
         % Predict response in every point of DOEmc
         switch srgModelNum
-            case{5}
+            case{1}
                 Y = predictor(DOEmc, srgModel(i).dmodel);
-            case{8}    
+            case{2}  
                 %Future development
         end
         result(i).YY = zeros(length(DOEmc(:,1)),1);
