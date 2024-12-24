@@ -32,6 +32,7 @@ function [success, errorMessage] = performSequentialOptimization(project, nSeq, 
     filenameOutOrig = inSameDirAs(executable, 'outOriginal.txt');
     copyfile(filenameIn, filenameInOrig);
     copyfile(filenameOut, filenameOutOrig);
+    delete(filenameOut);
 
     project.seqOptProgress.total = nSeq;
     for n=1:nSeq
@@ -74,7 +75,7 @@ function [success, errorMessage] = performSequentialOptimization(project, nSeq, 
         % race condition)
         success = waitUntilFileExists(filenameOut, 3, 0.5);
         if ~success
-            errorMessage = "no output file was generated!";
+            errorMessage = "no output file was generated! Check if the script is able to generate output with only one row of data.";
             return
         end
 
