@@ -437,7 +437,8 @@ classdef Presenter
             else
                 Fsize = 12; % Fontsize for figures
                 histogram(plotArea, data, 'FaceColor', [1 0.9 0.75]);
-                xlabel(plotArea, responseName, 'FontSize', Fsize);
+                x_lab=append(responseName,': mu=',num2str(mean(data),'%4.2f'),' stdev=',num2str(std(data),'%4.2f'));
+                xlabel(plotArea, x_lab, 'FontSize', Fsize);
                 ylabel(plotArea, 'density', 'FontSize', Fsize);
             end
         end
