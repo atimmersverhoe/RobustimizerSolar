@@ -6,13 +6,13 @@ Welcome to the Robustimizer project! We appreciate your interest in contributing
 
 ## How to Report Issues
 
-If you encounter any issues or have suggestions for improvements, please [submit them](https://gitlab.tudelft.nl/onejadseyfi/robustimizer-internal/-/issues) via the project's GitLab pages. Make sure to provide as much detail as possible to help us understand and resolve the issue.
+If you encounter any issues or have suggestions for improvements, please [submit them](https://github.com/onejadseyfi/Robustimizer/issues) via the project's GitHub pages. Make sure to provide as much detail as possible to help us understand and resolve the issue.
 
 ## How to Submit Changes
 
 We accept contributions both as patches and pull requests (using forks). To submit changes:
 
-1. Fork the repository on GitLab.
+1. Fork the repository on GitHub.
 2. Create a new branch for your changes.
 3. Make your changes and commit them with clear and descriptive messages.
 4. Push your changes to your fork.
@@ -63,7 +63,7 @@ Please add tests for any new features or bug fixes you implement.
 
 We use the following branching model:
 
-- `master`: The branch where new features and bug fixes are integrated. This will eventually become the next release.
+- `main`: The branch where new features and bug fixes are integrated. This will eventually become the next release.
 - Feature branches: For new features (`feature/your-feature-name`).
 - Bugfix branches: For bug fixes (`bugfix/your-bugfix-name`).
 - Release branches: For preparing releases (`release/x.y.z`).
@@ -84,12 +84,12 @@ This project is licensed under the terms specified in the [LICENSE.md](LICENSE.m
 
 ## Contact Information
 
-For any questions or further assistance, please contact the project maintainers via the project's GitLab pages.
+For any questions or further assistance, please contact the project maintainers via the project's GitHub pages.
 
 ## Additional Resources
 
-- [Technical details (Word) document](documentation/Technical details.docx)
-- [Application Design](documentation/Application Design.md)
+- [Technical details (pdf) document](documentation/TechnicalDetails.pdf)
+- [Application Design](documentation/ApplicationDesign.md)
 - [README.md](README.md)
 
 Thank you for contributing to Robustimizer!

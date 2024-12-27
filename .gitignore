@@ -45,6 +45,9 @@ Thumbs.db
 # temporary test folder
 #test/
 
+# Comsol Lock file
+.lock
+
 # temporary input/output text files
 in.txt
 out.txt

@@ -10,8 +10,8 @@ Robustimizer is a Matlab-based application for surrogate-model-based robust opti
 
 - Analytical propagation of noise via surrogate models
 - Performing principal component analysis (PCA) on the input noise
-- Automatic update of the initial design of experiments (DoE) based on multiple criteria
-- Communication with user-defined scripts
+- Automatic update of the initial design of experiments (DOE) based on multiple criteria
+- Communication with user-defined executables/scripts
 
 ## Requirements
 
@@ -35,7 +35,7 @@ Robustimizer2024
 
 ## Usage
 
-See the relevant chapters in the [Technical details (Word) document](<documentation/Technical details.docx>).
+See the relevant chapters in the [Technical details (pdf) document](<documentation/TechnicalDetails.pdf>).
 
 ## Contributing
 

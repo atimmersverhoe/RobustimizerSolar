@@ -25,9 +25,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [-5 10]);
             setNoiseVariableRanges(test.prj, 7.5, 2.5);
-            [ok, msg] = importDOE(test.prj, 'test_branin_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_branin_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_branin_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_branin_out.txt');
             test.verifyTrue(ok, msg);
             [ok, msg] = fitSurrogateModel(test.prj);
             test.verifyTrue(ok, msg);
@@ -50,9 +50,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [6 8; 70 80]);
             setNoiseVariableRanges(test.prj, [3 2.3], [1 0.1]);
-            [ok, msg] = importDOE(test.prj, 'test_B1_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_B1_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_B1_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_B1_out.txt');
             test.verifyTrue(ok, msg);
             [ok, msg] = fitSurrogateModel(test.prj);
             test.verifyTrue(ok, msg);
@@ -76,9 +76,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [-5 10]);
             setNoiseVariableRanges(test.prj, 7.5, 2.5);
-            [ok, msg] = importDOE(test.prj, 'test_branin_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_branin_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_branin_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_branin_out.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionIncludeSkewness(test.prj, true);
             [ok, msg] = fitSurrogateModel(test.prj);
@@ -104,9 +104,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             setDesignVariableRanges(test.prj, [-5 10]);
             setNoiseVariableRanges(test.prj, 7.5, 2.5);
             setNrOfConstraintsResponses(test.prj,1)
-            [ok, msg] = importDOE(test.prj, 'test_braninCon_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_braninCon_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_braninCon_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_braninCon_out.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanPlusSigma');
             setConstraintTargetValue(test.prj, 5, 1); %for constriant 1
@@ -130,9 +130,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [-5 10]);
             setNoiseVariableRanges(test.prj, 7.5, 2.5);
-            [ok, msg] = importDOE(test.prj, 'test_branin_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_branin_in.txt');
             test.verifyTrue(ok, msg);
-            setResultsGeneratorScript(test.prj,fullfile(pwd,'Branin.exe'))
+            setResultsGeneratorScript(test.prj,fullfile(pwd,'Examples/UnitTest/Branin.exe'))
             [ok, msg] = runResultsGeneratorScript(test.prj);
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanPlus3Sigma');
@@ -159,9 +159,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_NoCon_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_NoCon_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_NoCon_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_NoCon_out.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanPlus3Sigma');
             setObjectiveFunctionTargetValue(test.prj, 0);
@@ -184,11 +184,11 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             % Given these inputs and outputs
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_NoCon_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_NoCon_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_NoCon_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_NoCon_out.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importMCSample(test.prj, 'MC500Rnd.txt');
+            [ok, msg] = importMCSample(test.prj, 'Examples/UnitTest/MC500Rnd.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanMinT1Sigma');
             setObjectiveFunctionTargetValue(test.prj, 0);
@@ -214,9 +214,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
             setNrOfConstraintsResponses(test.prj,1)
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_NoCon_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_NoCon_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_1Con_InEqT0_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_1Con_InEqT0_out.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanPlusSigma');
             setConstraintTargetValue(test.prj, 0.1, 1); %for constriant 1 only
@@ -240,9 +240,9 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
             setNrOfConstraintsResponses(test.prj,2)
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_2Con_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_2Con_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_out.txt');
             test.verifyTrue(ok, msg);
             setObjectiveFunctionType(test.prj,'MinMeanPlusSigma');
             setConstraintIncludeSkewness(test.prj, 1, 2); %for constriant 2 only
@@ -269,13 +269,13 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
             setNrOfConstraintsResponses(test.prj,2)
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_2Con_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_2Con_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_out.txt');
             test.verifyTrue(ok, msg);
             [ok, msg] = fitSurrogateModel(test.prj);
             test.verifyTrue(ok, msg);
-            [ok, msg] = importMCSample(test.prj, 'MC500LHS2D.txt');
+            [ok, msg] = importMCSample(test.prj, 'Examples/UnitTest/MC500LHS2D.txt');
             test.verifyTrue(ok, msg);
 
             % Compare analytical and MC
@@ -303,13 +303,13 @@ classdef TestRobustOptimizationWithUseCases < matlab.unittest.TestCase
             setDesignVariableRanges(test.prj, [0 1;0 1;0 1;0 1]);
             setNoiseVariableRanges(test.prj, [0.5, 0.5],[0.1666, 0.1666]);
             setNrOfConstraintsResponses(test.prj,2)
-            [ok, msg] = importDOE(test.prj, 'test_Hartmann6D_2Con_in.txt');
+            [ok, msg] = importDOE(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_in.txt');
             test.verifyTrue(ok, msg);
-            [ok, msg] = importResults(test.prj, 'test_Hartmann6D_2Con_out.txt');
+            [ok, msg] = importResults(test.prj, 'Examples/UnitTest/test_Hartmann6D_2Con_out.txt');
             test.verifyTrue(ok, msg);
             [ok, msg] = fitSurrogateModel(test.prj);
             test.verifyTrue(ok, msg);
-            [ok, msg] = importMCSample(test.prj, 'MC5000rnd.txt');
+            [ok, msg] = importMCSample(test.prj, 'Examples/UnitTest/MC5000rnd.txt');
             test.verifyTrue(ok, msg);
 
             % Compare analytical and MC
