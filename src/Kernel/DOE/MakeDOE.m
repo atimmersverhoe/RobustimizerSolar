@@ -1,6 +1,6 @@
 % Robustimizer - Copyright (c) 2024 Omid Nejadseyfi
 % Licensed under the GNU General Public License v3.0, see LICENSE.md.
-function [DOE]=makeDOE(np,nDOE,cp,mmi)
+function [DOE]=MakeDOE(np,nDOE,cp,mmi)
 
 % This function generates the DOE based on the given input
 

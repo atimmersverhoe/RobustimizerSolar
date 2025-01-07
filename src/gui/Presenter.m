@@ -435,9 +435,9 @@ classdef Presenter
             if isempty(data)
                 cla(plotArea);
             else
-                Fsize = 12; % Fontsize for figures
+                Fsize = 10; % Fontsize for figures
                 histogram(plotArea, data, 'FaceColor', [1 0.9 0.75]);
-                x_lab=append(responseName,': mu=',num2str(mean(data),'%4.2f'),' stdev=',num2str(std(data),'%4.2f'));
+                x_lab=append(responseName,': mu=',num2str(mean(data),'%4.2f'),' stdev=',num2str(std(data),'%4.2f'),' skewness=',num2str(skewness(data),'%4.2f'));
                 xlabel(plotArea, x_lab, 'FontSize', Fsize);
                 ylabel(plotArea, 'density', 'FontSize', Fsize);
             end
