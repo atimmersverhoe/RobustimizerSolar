@@ -49,14 +49,6 @@ Thumbs.db
 .lock
 
 # temporary input/output text files
-in.txt
-out.txt
-OutputSeqObj.txt
-outOriginal.txt
-inOriginal.txt
-inSequentiallyUpdated.txt
-outSequentiallyUpdated.txt
-SaveOutput.txt
 # As 'src' is often the working directory, during development and 
 # (manual) testing, a lot of temporary *.txt files end up in src.
 # Ignoring them all avoids cluttering the git status output, at the
