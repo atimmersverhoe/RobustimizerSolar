@@ -21,7 +21,7 @@ classdef ObjectiveFunctionSpec < handle
             sigma = [];
             switch obj.type
                 case ObjectiveFunctionType.MinSigma
-                    f = 'sigma(1).sigma';
+                    f = 'mu(1).mu';
                 case ObjectiveFunctionType.MinMeanPlusSigma
                     f = 'mu(1).mu+sigma(1).sigma';
                 case ObjectiveFunctionType.MinMeanPlus3Sigma
